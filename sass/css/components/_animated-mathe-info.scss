@@ -1,8 +1,29 @@
-#animated-mathe-info {
+.animated-mathe-info, #animated-mathe-info-spacer {
 	color: _palette(fg-bold);
 	font-family: _font(family-heading);
 	font-weight: _font(weight-heading-bold);
 	letter-spacing: _font(kern-heading);
 	margin: 0 0 (_size(element-margin) * 0.5) 0;
 	text-transform: uppercase;
+}
+
+.animated-mathe-info {
+	transition: transform 2s, opacity 2s;
+	transform: translateY(-1em);
+	opacity: 0;
+
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.animated-mathe-info.current {
+	transition: transform 2s ease-in, opacity 2s;
+}
+
+.animated-mathe-info-container {
+	position: absolute;
+	display: inline-block;
+	width: 7ch;
+	height: 100%;
 }
