@@ -61,7 +61,15 @@
 			<section id="banner">
 				<div class="inner">
 					<div class="logo"><span class="icon brands fa-discord"></span></div>
-					<h2>KIT Mathe/Info Discordserver</h2>
+					<h2>
+						KIT
+						<span class="animated-mathe-info-container">
+							<span class="animated-mathe-info current"></span>
+							<span class="animated-mathe-info old"></span>
+						</span>
+						<span id="animated-mathe-info-spacer">Mathe/Info</span>
+						Discordserver
+					</h2>
 					<p>Discordserver für Informatik &amp; Mathematik Studium am KIT</p>
 					<p><a class="button primary" href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Tritt bei!</a></p>
 				</div>
@@ -171,6 +179,7 @@
 		<script src="{{ get_url(path="js/breakpoints.min.js") | safe }}"></script>
 		<script src="{{ get_url(path="js/util.js") | safe }}"></script>
 		<script src="{{ get_url(path="js/main.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/animated-mathe-info.js") | safe }}"></script>
 
 	</body>
 </html>
