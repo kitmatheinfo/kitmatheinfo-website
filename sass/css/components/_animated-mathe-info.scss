@@ -15,10 +15,16 @@
 	left: 0;
 	position: absolute;
 	top: 0;
+
+	text-align: center;
 }
 
 .animated-mathe-info.current {
-	transition: transform 2s ease-in, opacity 2s;
+	transition: transform 2s, opacity 2s;
+}
+
+.animated-mathe-info.no-animate {
+	transition: unset;
 }
 
 .animated-mathe-info-container {

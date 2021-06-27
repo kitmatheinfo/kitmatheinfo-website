@@ -1,11 +1,15 @@
 function removeNoscriptSettings() {
-  document.querySelector("#animated-mathe-info-spacer").textContent = "Mathe";
-  document.querySelector("#animated-mathe-info-spacer").style.opacity = 0;
+  const spacer = document.querySelector("#animated-mathe-info-spacer");
+  spacer.textContent = "Mathe";
+  spacer.style.opacity = 0;
+  document.querySelector(".animated-mathe-info.current").style.width = spacer.getBoundingClientRect().width + "px";
+  document.querySelector(".animated-mathe-info.old").style.width = spacer.getBoundingClientRect().width + "px";
 }
 
 window.addEventListener("load", () => {
   let currentBlueprint = 0;
   let blueprints = ["Info", "Mathe"]
+  let directionMultiplier = 1;
 
   removeNoscriptSettings();
 
@@ -18,20 +22,24 @@ window.addEventListener("load", () => {
     currentBlueprint = (currentBlueprint + 1) % blueprints.length;
 
     currentFoo.textContent = blueprints[currentBlueprint];
-    currentFoo.style.transform = "translateY(1em)";
-    currentFoo.style.opacity = 1;
+    currentFoo.classList.add("no-animate");
+    currentFoo.style.transform = `translateY(${-directionMultiplier}em)`;
     currentFoo.classList.add("old");
     currentFoo.classList.remove("current");
 
     setTimeout(() => {
+      currentFoo.classList.remove("no-animate");
       currentFoo.style.transform = "translateY(0)";
-    }, 1);
+      currentFoo.style.opacity = 1;
+    }, 20);
 
     // Outro it!
-    oldFoo.style.transform = "translateY(-1em)";
+    oldFoo.style.transform = `translateY(${directionMultiplier}em)`;
     oldFoo.style.opacity = 0;
     oldFoo.classList.remove("old");
     oldFoo.classList.add("current");
+
+    directionMultiplier *= -1;
   }
 
   iteration();
