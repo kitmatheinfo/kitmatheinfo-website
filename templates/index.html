@@ -20,7 +20,7 @@
 			<meta property="og:type" content="website">
 			<meta property="og:title" content="{{ config.title }}">
 			<meta property="og:url" content="{{ current_url | safe }}">
-			<meta property="og:image" content="{{ config.extra.social_image | safe}}">
+			<meta property="og:image" content="{{ config.extra.social_image}}">
 			<meta property="og:description" content="{{ config.description }}">
 		{% endblock opengraph %}
 	</head>
@@ -31,7 +31,7 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.html">Solid State</a></h1>
+					<h1><a href="index.html">{{ config.title }}</a></h1>
 					<nav>
 						<a href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Server beitreten</a>
 						<!-- <a href="#menu">Menü</a> -->
@@ -62,7 +62,7 @@
 					<div class="logo"><span class="icon brands fa-discord"></span></div>
 					<h2>KIT Mathe/Info Discordserver</h2>
 					<p>Discordserver für Informatik &amp; Mathematik Studium am KIT</p>
-					<p><a class="button primary" href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Trete bei!</a></p>
+					<p><a class="button primary" href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Tritt bei!</a></p>
 				</div>
 			</section>
 
@@ -87,7 +87,7 @@
 						<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 						<div class="content">
 							<h2 class="major">Lerne gemeinsam</h2>
-							<p>Gemeinsam Lernen macht nicht nur häufig mehr Spaß, es motiviert auch und bringt bessere Noten. Wir sind Studenten aus allen möglichen (und unmöglichen) Semestern und haben für die meisten Vorlesungen aktive Channel, in welchen ihr ganz leicht Lernpartner und Lerngruppen finden könnt. Und das Beste: Kein Zwang, lernt die Leute zuerst Online kennen, bevor ihr gemeinsam auf die Klausur lern.</p>
+							<p>Gemeinsam Lernen macht nicht nur häufig mehr Spaß, es motiviert auch und bringt bessere Noten. Wir sind Studenten aus allen möglichen (und unmöglichen) Semestern und haben für die meisten Vorlesungen aktive Channel, in welchen ihr ganz leicht Lernpartner und Lerngruppen finden könnt. Und das Beste: Kein Zwang, lernt die Leute zuerst online kennen, bevor ihr gemeinsam auf die Klausur lernt.</p>
 							<a href="{{ config.extra.discord_invite | safe}}" class="special"><span class="icon brands fa-discord"></span> Upgrade dein Studium</a>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 						<div class="content">
 							<h2 class="major">Lern Freunde kennen</h2>
-							<p>Das Studium besteht nicht nur aus Lernen, auch der soziale Austausch ist wichtig. Aber als introvertiertes Wesen fällt es dir schwer Anschluss zu finden? Egal, im Internet merkt das niemand. Nicht mal, wenn man diesen Text hier schreibt. Wir haben außerdem Memes und genug andere introvertierte Mitglieder.</p>
+							<p>Das Studium besteht nicht nur aus Lernen, auch der soziale Austausch ist wichtig. Aber als introvertiertes Wesen fällt es dir schwer, Anschluss zu finden? Egal, im Internet merkt das niemand. Nicht mal, wenn man diesen Text hier schreibt. Wir haben außerdem Memes und genug andere introvertierte Mitglieder.</p>
 							<a href="{{ config.extra.discord_invite | safe}}" class="special"><span class="icon brands fa-discord"></span> Komm in die Gruppe</a>
 						</div>
 					</div>
