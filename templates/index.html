@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		{% block title %}
+			<title>{{ config.title }}</title>
+		{% endblock title %}
+		<meta charset="utf-8" />
+		{% block meta_description %}
+			{% if config.description %}<meta name="description" content="{{ config.description }}" />{% endif %}
+		{% endblock meta_description %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ get_url(path="css/main.css") | safe }}" />
+		<noscript><link rel="stylesheet" href="{{ get_url(path="css/noscript.css") | safe }}" /></noscript>
+		{% block opengraph %}
+			<meta property="og:type" content="website">
+			<meta property="og:title" content="{{ config.title }}">
+			<meta property="og:url" content="{{ current_url | safe }}">
+			<meta property="og:image" content="{{ config.extra.social_image | safe}}">
+		{% endblock opengraph %}
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html">Solid State</a></h1>
+					<nav>
+						<a href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Server beitreten</a>
+						<!-- <a href="#menu">Menü</a> -->
+					</nav>
+				</header>
+
+			<!-- Menu -->
+			<!--
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menü</h2>
+					<ul class="links">
+						<li><a href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Server beitreten</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+						<li><a href="#">Log In</a></li>
+						<li><a href="#">Sign Up</a></li>
+					</ul>
+					<a href="#" class="close">Schließen</a>
+				</div>
+			</nav>
+			-->
+
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<div class="logo"><span class="icon brands fa-discord"></span></div>
+					<h2>KIT Mathe/Info Discordserver</h2>
+					<p>Discordserver für Informatik &amp; Mathematik Studium am KIT</p>
+					<p><a class="button primary" href="{{ config.extra.discord_invite | safe}}"><span class="icon brands fa-discord"></span> Trete bei!</a></p>
+				</div>
+			</section>
+
+			<!-- Wrapper -->
+			<section id="wrapper">
+
+				<!-- One -->
+				<section id="one" class="wrapper spotlight style1">
+					<div class="inner">
+						<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+						<div class="content">
+							<h2 class="major">Tausch dich aus</h2>
+							<p>Egal ob Studieninhalte oder organisatorische Fragen. Wir sind inzwischen so Viele, dass fast jede Frage von irgendwem beantwortet werden kann. Suchst du Erfahrungen zu einem Prüfungsmodul, Tipps fürs Studium oder bist noch gar kein Studenten und möchtest einfach wissen, wie andere Studenten das Studium empfinden?</p>
+							<a href="{{ config.extra.discord_invite | safe}}" class="special"><span class="icon brands fa-discord"></span> Stell deine Frage</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Two -->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner">
+						<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+						<div class="content">
+							<h2 class="major">Lerne gemeinsam</h2>
+							<p>Gemeinsam Lernen macht nicht nur häufig mehr Spaß, es motiviert auch und bringt bessere Noten. Wir sind Studenten aus allen möglichen (und unmöglichen) Semestern und haben für die meisten Vorlesungen aktive Channel, in welchen ihr ganz leicht Lernpartner und Lerngruppen finden könnt. Und das Beste: Kein Zwang, lernt die Leute zuerst Online kennen, bevor ihr gemeinsam auf die Klausur lern.</p>
+							<a href="{{ config.extra.discord_invite | safe}}" class="special"><span class="icon brands fa-discord"></span> Upgrade dein Studium</a>
+						</div>
+					</div>
+					</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner">
+						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+						<div class="content">
+							<h2 class="major">Lern Freunde kennen</h2>
+							<p>Das Studium besteht nicht nur aus Lernen, auch der soziale Austausch ist wichtig. Aber als introvertiertes Wesen fällt es dir schwer Anschluss zu finden? Egal, im Internet merkt das niemand. Nicht mal, wenn man diesen Text hier schreibt. Wir haben außerdem Memes und genug andere introvertierte Mitglieder.</p>
+							<a href="{{ config.extra.discord_invite | safe}}" class="special"><span class="icon brands fa-discord"></span> Komm in die Gruppe</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Four -->
+				<!--
+				<section id="four" class="wrapper alt style1">
+					<div class="inner">
+						<h2 class="major">Vitae phasellus</h2>
+						<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+						<section class="features">
+							<article>
+								<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+								<h3 class="major">Sed feugiat lorem</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+							<article>
+								<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+								<h3 class="major">Nisl placerat</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+							<article>
+								<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+								<h3 class="major">Ante fermentum</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+							<article>
+								<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+								<h3 class="major">Fusce consequat</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+						</section>
+						<ul class="actions">
+							<li><a href="#" class="button">Browse All</a></li>
+						</ul>
+					</div>
+				</section>
+			-->
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<h2 class="major">Über</h2>
+					<p>
+						Diese Website ist ein Gemeinschaftsprojekt einiger Servermitglieder und basiert auf <a href="https://www.getzola.org/">Zola</a>. Wenn du diese Website erweitern möchtest oder einen Fehler gefunden hast, bist du herzlich eingeladen.
+					</p>
+					<ul class="contact">
+						<li class="icon brands fa-discord"><a href="{{ config.extra.discord_invite | safe}}">Discord</a></li>
+						<li class="icon brands fa-github"><a href="{{ config.extra.github_repo | safe}}">GitHub</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Headergrafik: Chrisliebär</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<script src="{{ get_url(path="js/jquery.min.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/jquery.scrollex.min.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/browser.min.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/breakpoints.min.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/util.js") | safe }}"></script>
+		<script src="{{ get_url(path="js/main.js") | safe }}"></script>
+
+	</body>
+</html>
