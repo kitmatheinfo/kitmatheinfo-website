@@ -12,6 +12,6 @@ external_links_no_referrer = true
 smart_punctuation = true
 
 [extra]
-social_image = "https://cdn.discordapp.com/icons/501365485837877268/a_830c17a8082accf987eb892b335c4721.webp?size=128"
+social_image = "https://kitmatheinfo.de/icon/kitmatheinfo"
 discord_invite = "https://discord.gg/jMmYM5b3jT"
 github_repo = "https://github.com/chrisliebaer/kitmatheinfo-website"
