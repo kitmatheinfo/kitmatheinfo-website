@@ -12,11 +12,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker meta
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: docker/metadata-action@v4
         with:
           images: "ghcr.io/${{ github.repository }}"
-          tag-sha: true
-          tag-custom: latest
+          tags: |
+            type=sha
+          flavor: |
+            latest=true
       - name: "Setup Docker Buildx"
         uses: "docker/setup-buildx-action@v1"
       - name: "Login to ghcr.io"
