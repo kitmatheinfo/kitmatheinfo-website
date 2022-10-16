@@ -3,13 +3,14 @@ on:
   push:
     branches:
       - master
+
 jobs:
   docker:
     name: Push to GitHub Container Registry
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
       - uses: actions/setup-node@v3
@@ -20,11 +21,12 @@ jobs:
       - run: |
           npm run build
           npm run export
-          mv out ../static/fahrplan
         working-directory: ./fahrplan
         env:
           ICAL_URL: https://calendar.google.com/calendar/ical/903e162de81a5fbd1a1777760f8858ff6c2555398b8a1649f7bc86ccd6e2845a%40group.calendar.google.com/public/basic.ics
           NEXT_PUBLIC_BASE_PATH: /fahrplan
+      - run: mv ./fahrplan/out ./static/fahrplan
+        working-directory: .
       - name: Docker meta
         id: docker_meta
         uses: docker/metadata-action@v4
