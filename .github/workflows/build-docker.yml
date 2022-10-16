@@ -1,6 +1,8 @@
 name: Build Docker image
 on:
-  push
+  push:
+    branches:
+      - master
 
 jobs:
   docker:
@@ -23,13 +25,8 @@ jobs:
         env:
           ICAL_URL: https://calendar.google.com/calendar/ical/903e162de81a5fbd1a1777760f8858ff6c2555398b8a1649f7bc86ccd6e2845a%40group.calendar.google.com/public/basic.ics
           NEXT_PUBLIC_BASE_PATH: /fahrplan
-      - run: ls -la .
-      - run: ls -la ./fahrplan
       - run: mv ./fahrplan/out ./static/fahrplan
         working-directory: .
-      - run: ls -la static
-      - run: ls -la static/fahrplan
-      - run: exit 1
       - name: Docker meta
         id: docker_meta
         uses: docker/metadata-action@v4
