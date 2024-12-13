@@ -1,4 +1,4 @@
-base_url = "https://kitmatheinfo.de/"
+base_url = "https://kitmatheinfo.net/"
 title = "KIT Mathe/Info Discordserver"
 description = "Inoffizieller Discordserver für Informatik- und Mathematikstudenten des KIT"
 
@@ -12,6 +12,6 @@ external_links_no_referrer = true
 smart_punctuation = true
 
 [extra]
-social_image = "https://icon.kitmatheinfo.de/jMmYM5b3jT"
+social_image = "https://icon.kitmatheinfo.net/jMmYM5b3jT"
 discord_invite = "https://discord.gg/jMmYM5b3jT"
 github_repo = "https://github.com/kitmatheinfo/kitmatheinfo-website"
